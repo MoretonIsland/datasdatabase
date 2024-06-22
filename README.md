@@ -63,8 +63,8 @@ URL: /delete.php
 Metoda: POST
 Zde endpoint odstraňuje záznam dat z databáze podle zadaného indexu.
 Parametry:
-index (int): index záznamu, který má být smazán
-Funkcí je odstranění záznamu dat z databáze na základě specifikovaného indexu.
+index: index záznamu, který má být smazán
+Funkcí je odstranění záznamu dat z databáze.
 
 Popis souborů
 
