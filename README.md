@@ -89,11 +89,11 @@ Přijímá index záznamu, který má být smazán. Přesouvá smazaný záznam 
 soubor deleted.php
 Zobrazuje záznamy, které byly smazány.
 Funkce:
-Zpracovává data ze souboru deleted_data.csv jako CSV soubor a výsledek je poskytován ve formátu JSON.
+Zpracovává data ze souboru deleted_data.csv jako CSV soubor a výsledek je zobrazen ve formátu JSON.
 
 soubor data.csv
 Obsahuje hlavní záznamy dat.
-Struktura: Obsahuje tato data: datum, nejvyšší teplota, nejnižší teplota, nejvyšší průměrná teplota a nejnižší průměrná teplota.
+Struktura: Obsahuje tato data: DateTime; High temperature; Low temperature; Normal high temperature; Normal low temperature
 
 soubor deleted_data.csv
 Ukládá záznamy, které byly smazány ze souboru data.csv.
