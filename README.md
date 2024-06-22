@@ -25,7 +25,7 @@ Struktura projektu weather_API_2
 
 API Endpointy
 
-V tomto projektu jsou endpointy obsaženy v souborech api.php a delete.php. Tyto soubory obsahují logiku, která zpracovává příchozí HTTP požadavky a provádí operace s databází meteorologických dat.
+V tomto projektu jsou endpointy obsaženy v souborech api.php a delete.php. Tyto soubory obsahují logiku, která zpracovává příchozí HTTP požadavky a provádí operace s databází dat.
 
 Endpointy v souboru api.php:
 URL: /api.php
