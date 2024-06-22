@@ -142,22 +142,21 @@ soubor deleted_data.csv
 Má stejnou strukturu jako soubor data.csv.
 
 Příručka pro vývojáře
+
 Klientská strana: Použijte soubor index.php pro odesílání a zobrazení dat.
 Serverová strana: Ponechte, přidejte nebo upravte funkce v api.php a CsvDatabase.php.
 Styly: Ponechte nebo upravte style.css pro změnu vzhledu aplikace.
-4.	Testování: Důkladně testujte API endpointy pomocí nástrojů jako Postman nebo CURL.
+Testování: Důkladně testujte API endpointy pomocí nástrojů jako Postman nebo CURL.
 
 Klientská Strana (index.php)
 Na klientské straně je soubor index.php hlavním rozhraním pro uživatele, kde mohou vkládat a zobrazovat data. Klíčové body v klientské části zahrnují:
-
-Formuláře pro zadávání dat: V index.php jsou implementovány HTML formuláře, které umožňují uživatelům zadávat data.
-
-Použití AJAX (script.js): Pro odesílání formulářových dat bez nutnosti obnovy stránky je využíván JavaScript, konkrétně soubor script.js. Tento soubor obsahuje logiku pro asynchronní komunikaci s serverem pomocí AJAX požadavků.
+Formuláře pro zadávání dat: V index.php jsou zahrnuty HTML formuláře, které umožňují uživatelům zadávat data.
+Pro odesílání formulářových dat je využíván JavaScript, konkrétně soubor script.js. 
 
 Serverová Strana (api.php a CsvDatabase.php)
 Na serverové straně jsou klíčové dva soubory pro manipulaci s daty:
 
-api.php: Tento soubor obsahuje veškerou logiku pro zpracování API požadavků. Definuje endpointy pro přidávání, aktualizaci, mazání a získávání dat z databáze CSV. API poskytuje rozhraní mezi klientskou stranou a manipulací s daty.
+api.php: Tento soubor obsahuje veškerou logiku pro zpracování API požadavků. Definuje endpointy pro přidávání, aktualizaci, mazání a získávání dat z databáze CSV. API poskytuje rozhraní mezi klientskou stranou a serverem pro manipulaci s daty.
 
 CsvDatabase.php: Třída CsvDatabase.php poskytuje přístup k databázi uložené ve formátu CSV. Obsahuje metody pro načítání dat z data.csv, ukládání nových záznamů, mazání záznamů a aktualizaci existujících dat v CSV souboru.
 
