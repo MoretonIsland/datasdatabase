@@ -8,7 +8,7 @@ Obsah
 -	Popis souborů
 -	Struktura databáze
 -	Příručka pro vývojáře
--	Kontakt
+
 
 Struktura projektu weather_API_2
 ├── api.php
