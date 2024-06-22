@@ -33,11 +33,11 @@ Endpoint pro vkládání nových záznamů dat do databáze:
 Create (Insert)
 Metoda: POST
 Údaje: 
-date: Datum meteorologických dat.
-high_temp: Nejvyšší teplota.
-low_temp: Nejnižší teplota.
-normal_high: Nejvyšší průměrná teplota.
-normal_low: Nejnižší průměrná teplota.
+date: Datum meteorologických dat
+high_temp: Nejvyšší teplota
+low_temp: Nejnižší teplota
+normal_high: Nejvyšší průměrná teplota
+normal_low: Nejnižší průměrná teplota
 Funkcí je obsluha POST požadavků a vkládání nových záznamů do databáze.
 
 Read (Select)
