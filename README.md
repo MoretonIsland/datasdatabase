@@ -25,19 +25,19 @@ Struktura projektu weather_API_2
 
 API Endpointy
 
-V tomto projektu jsou endpointy obsaženy v souborech api.php a delete.php. Tyto soubory obsahují logiku, která zpracovává příchozí HTTP požadavky a provádí operace s databází dat.
+V tomto projektu jsou endpointy obsaženy v souboru api.php a v souboru delete.php. Tyto soubory obsahují logiku, která zpracovává příchozí HTTP požadavky a provádí operace s databází dat.
 
 Endpointy v souboru api.php:
 URL: /api.php
-Endpoint pro vkládání nových záznamů meteorologických dat do databáze:
+Endpoint pro vkládání nových záznamů dat do databáze:
 Create (Insert)
 Metoda: POST
 Údaje: 
-date (string): Datum meteorologických dat.
-high_temp (float): Nejvyšší teplota.
-low_temp (float): Nejnižší teplota.
-normal_high (float): Nejvyšší průměrná teplota.
-normal_low (float): Nejnižší průměrná teplota.
+date: Datum meteorologických dat.
+high_temp: Nejvyšší teplota.
+low_temp: Nejnižší teplota.
+normal_high: Nejvyšší průměrná teplota.
+normal_low: Nejnižší průměrná teplota.
 Funkcí je obsluha POST požadavků a vkládání nových záznamů do databáze.
 
 Read (Select)
