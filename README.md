@@ -49,12 +49,12 @@ Update
 Metoda: PUT
 Zde endpoint aktualizuje existující záznam o meteorologických datech v databázi podle zadaného indexu.
 Parametry:
-index (int): index záznamu, který má být aktualizován
-date (string): nové datum
-high_temp: nová nejvyšší teplota.
-low_temp: nová nejnižší teplota.
-normal_high: nová nejvyšší průměrná teplota.
-normal_low: nová nejnižší průměrná teplota.
+index: index záznamu, který má být aktualizován
+date: nové datum
+high_temp: nová nejvyšší teplota
+low_temp: nová nejnižší teplota
+normal_high: nová nejvyšší průměrná teplota
+normal_low: nová nejnižší průměrná teplota
 Funkcí je zpracování PUT požadavků pro aktualizaci existujících záznamů v databázi.
 
 Endpoint v souboru delete.php:
