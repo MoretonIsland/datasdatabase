@@ -91,16 +91,12 @@ Zobrazuje záznamy, které byly smazány.
 Funkce:
 Zpracovává data ze souboru deleted_data.csv jako CSV soubor a výsledek je zobrazen ve formátu JSON.
 
-soubor data.csv
-Obsahuje hlavní záznamy dat.
-Struktura: Obsahuje tato data: DateTime; High temperature; Low temperature; Normal high temperature; Normal low temperature
-
 soubor deleted_data.csv
 Ukládá záznamy, které byly smazány ze souboru data.csv.
 Struktura je stejná jako v souboru data.csv.
 
 soubor index.php
-Hlavní rozhraní pro uživatele k vložení a zobrazení dat.
+Soubor index.php je hlavní rozhraní pro uživatele k vložení a zobrazení dat.
 Funkce:
 Poskytuje HTML formuláře pro zadávání dat.
 Používá AJAX (přes script.js) pro odesílání formulářových dat.
@@ -108,7 +104,7 @@ Používá AJAX (přes script.js) pro odesílání formulářových dat.
 soubor showInsertedData.php
 Zobrazuje všechna vložená data.
 Funkce:
-Načítá data z data.csv a zobrazuje je v HTML tabulce.
+Načítá data ze souboru data.csv a zobrazuje je v HTML tabulce.
 
 soubor script.js
 Přidává interaktivitu do index.php.
@@ -124,6 +120,8 @@ Databáze se skládá ze dvou CSV souborů, souboru data.csv a souboru deleted_d
 soubor data.csv
 Struktura:
 Soubor data.csv obsahuje data, která jsou uspořádána do řádků. Hodnoty teplot jsou udány ve stupních Celsia.
+Obsahuje hlavní záznamy dat.
+Struktura: Obsahuje tato data: DateTime; High temperature; Low temperature; Normal high temperature; Normal low temperature
 
 Popis řádků:
 DateTime: Datum a čas měření ve formátu ISO 8601 (YYYY-MM-DDTHH:MM)
@@ -134,7 +132,8 @@ Normal low temperature: Nejnižší průměrná teplota pro daný den
 
 Každý řádek v souboru data.csv odpovídá jednomu dni a obsahuje informace o naměřených teplotách a jejich průměrných hodnotách pro udaný den.
 
-DateTime;High temperature;Low temperature;Normal high temperature;Normal low temperature
+Příklad:
+DateTime; High temperature; Low temperature; Normal high temperature; Normal low temperature
 2024-01-04T00:00;2.22;-3.33;0;-7.22
 2024-01-05T00:00;3.89;-4;0;-7.78
 2024-01-06T00:00;2.78;1.11;0;-7.78
@@ -143,9 +142,9 @@ soubor deleted_data.csv
 Má stejnou strukturu jako soubor data.csv.
 
 Příručka pro vývojáře
-Klientská Strana: Použijte soubor index.php pro odesílání a zobrazení dat.
-Serverová Strana: Přidejte nebo upravte funkce v api.php a CsvDatabase.php pro nové endpointy nebo změny v logice.
-Styly: Upravte style.css pro změnu vzhledu aplikace.
+Klientská strana: Použijte soubor index.php pro odesílání a zobrazení dat.
+Serverová strana: Ponechte, přidejte nebo upravte funkce v api.php a CsvDatabase.php.
+Styly: Ponechte nebo upravte style.css pro změnu vzhledu aplikace.
 4.	Testování: Důkladně testujte API endpointy pomocí nástrojů jako Postman nebo CURL.
 
 Klientská Strana (index.php)
