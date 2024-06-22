@@ -42,8 +42,8 @@ Funkcí je obsluha POST požadavků a vkládání nových záznamů do databáze
 
 Read (Select)
 Metoda: GET
-Endpoint vrací všechny existující záznamy meteorologických dat uložených v databázi.
-Funkcí je získání a vrácení všech záznamů z databáze ve formátu JSON pole.
+Endpoint vrací všechny existující záznamy dat uložených v databázi.
+Funkcí je získání a vrácení všech záznamů z databáze ve formátu JSON.
 
 Update
 Metoda: PUT
