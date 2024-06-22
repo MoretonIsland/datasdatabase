@@ -80,6 +80,7 @@ soubor api.php
 Zpracovává API požadavky na vytvoření, načtení a aktualizaci dat.
 Funkce: 
 Zpracovává POST, GET a PUT požadavky. Používá třídu CsvDatabase pro operace s databází.
+
 soubor delete.php
 Zpracovává požadavky na smazání záznamů z data.csv.
 Funkce:
