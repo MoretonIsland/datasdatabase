@@ -166,18 +166,23 @@ Styly (styles.css)
 Soubor styles.css definuje vizuální podobu aplikace. 
 
 Testování
-Testování přímo v prohlížeči pomocí localhost URL
+Testování přímo v prohlížeči pomocí localhost URL - localhost/jméno složky, ve které je API/název souboru
 1. Zobrazení všech dat (API endpoint pro načítání dat)
-Otevřete webový prohlížeč a zadejte URL vašeho localhost a cesty k vašemu API endpointu - localhost/jméno složky, ve které je umístěno API/název souboru pro načítání dat.
+Otevřete webový prohlížeč a zadejte URL vašeho localhost a cesty k vašemu API endpoinatu - název souboru pro načítání dat.
 Například:
 http://localhost/weather_API_2/api.php
 Stiskněte Enter pro odeslání požadavku.
 Prohlížeč zobrazí odpověď od serveru obsahující všechna data ve formátu JSON.
 2. Zobrazení smazaných dat (API endpoint pro načítání smazaných dat)
-Pro zobrazení smazaných zadávejte do adresního řádku například:
+Otevřete webový prohlížeč a zadejte URL vašeho localhost a cesty k vašemu API endpoinatu - název souboru pro načítání smazaných dat.
+Například:
 http://localhost/weather_API_2/deleted.php
 Stiskněte Enter pro odeslání požadavku.
 Prohlížeč zobrazí odpověď od serveru obsahující smazaná data ve formátu JSON.
+4. Zobrazení posledních vložených dat (API endpoint pro načítání posledních vložených dat)
+Otevřete webový prohlížeč a zadejte URL vašeho localhost a cesty k vašemu API endpoinatu - název souboru pro načítání posledních vložených dat.
+Například:
+http://localhost/weather_API_2/showInsertedData.php
 
 
 
