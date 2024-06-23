@@ -25,9 +25,8 @@ if ($lastRow === false) {
         'Low temperature' => $lastRow[2],
         'Normal_high_temp' => $lastRow[3],
         'Normal_low_temp' => $lastRow[4]
-    ]);
+    ], JSON_PRETTY_PRINT);
 }
 
+
 ?>
-
-
