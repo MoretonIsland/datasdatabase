@@ -24,7 +24,7 @@ Struktura projektu weather_API_2
 
 API Endpointy
 
-V tomto projektu jsou endpointy obsaženy v souboru api.php a v souboru delete.php. Tyto soubory obsahují logiku, která zpracovává příchozí HTTP požadavky a provádí operace s databází dat.
+V tomto projektu jsou endpointy obsaženy v souboru api.php,v souboru delete.php a v souboru showInsertedData.php. Tyto soubory obsahují logiku, která zpracovává příchozí HTTP požadavky a provádí operace s databází dat.
 
 Endpointy v souboru api.php:
 URL: /api.php
@@ -64,6 +64,12 @@ Endpoint odstraňuje záznam dat z databáze podle zadaného indexu.
 Parametry:
 index: index záznamu, který má být smazán
 Funkcí je odstranění záznamu dat z databáze.
+
+Endpoint v souboru showInsertedData.php:
+Show Last Inserted Data
+URL: /showInsertedData.php
+Metoda: GET
+Funkcí je vrácení posledních vložených dat a získání a vrácení posledního záznamu ve formátu JSON.
 
 Popis souborů
 
