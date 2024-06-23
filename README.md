@@ -9,7 +9,6 @@ Obsah
 -	Struktura databáze
 -	Příručka pro vývojáře
 
-
 Struktura projektu weather_API_2
 ├── api.php
 ├── CsvDatabase.php
@@ -33,7 +32,7 @@ Endpoint pro vkládání nových záznamů dat do databáze:
 Create (Insert)
 Metoda: POST
 Údaje: 
-date: Datum meteorologických dat
+date: Datum, teplota
 high_temp: Nejvyšší teplota
 low_temp: Nejnižší teplota
 normal_high: Nejvyšší průměrná teplota
@@ -47,10 +46,10 @@ Funkcí je získání a vrácení všech záznamů z databáze ve formátu JSON.
 
 Update
 Metoda: PUT
-Zde endpoint aktualizuje existující záznam o meteorologických datech v databázi podle zadaného indexu.
+Endpoint aktualizuje existující záznam dat v databázi podle zadaného indexu.
 Parametry:
 index: index záznamu, který má být aktualizován
-date: nové datum
+date: nové datum, nová teplota
 high_temp: nová nejvyšší teplota
 low_temp: nová nejnižší teplota
 normal_high: nová nejvyšší průměrná teplota
@@ -61,7 +60,7 @@ Endpoint v souboru delete.php:
 Delete
 URL: /delete.php
 Metoda: POST
-Zde endpoint odstraňuje záznam dat z databáze podle zadaného indexu.
+Endpoint odstraňuje záznam dat z databáze podle zadaného indexu.
 Parametry:
 index: index záznamu, který má být smazán
 Funkcí je odstranění záznamu dat z databáze.
@@ -71,25 +70,22 @@ Popis souborů
 soubor CsvDatabase.php
 Obsahuje třídu CsvDatabase, která zajišťuje interakci s CSV soubory.
 Funkce:
-- insert: Vloží nová data do CSV souboru.
-- getAll: Načte všechna data z CSV souboru.
-- update: Aktualizuje záznam v CSV souboru.
-- delete: Odstraní záznam z CSV souboru a přesune ho do deleted_data.csv.
+- insert: Vložení nových dat do CSV souboru.
+- getAll: Načtení všech dat z CSV souboru.
+- update: Aktualizace záznamu v CSV souboru.
+- delete: Odstranění záznamu z CSV souboru a přesun záznamu do deleted_data.csv
 
 soubor api.php
 Zpracovává API požadavky na vytvoření, načtení a aktualizaci dat.
-Funkce: 
-Zpracovává POST, GET a PUT požadavky. Používá třídu CsvDatabase pro operace s databází.
+Funkcí je zpracování POST, GET a PUT požadavků a použití třídy CsvDatabase pro operace s databází.
 
 soubor delete.php
 Zpracovává požadavky na smazání záznamů z data.csv.
-Funkce:
-Přijímá index záznamu, který má být smazán. Přesouvá smazaný záznam do souboru deleted_data.csv.
+Funkcí je příjem index záznamu, který má být smazán a přesunutí smazaného záznamu do souboru deleted_data.csv.
 
 soubor deleted.php
 Zobrazuje záznamy, které byly smazány.
-Funkce:
-Zpracovává data ze souboru deleted_data.csv jako CSV soubor a výsledek je zobrazen ve formátu JSON.
+Funkcí je zpracování dat ze souboru deleted_data.csv jako CSV soubor a zobrazení výsledku ve formátu JSON.
 
 soubor deleted_data.csv
 Ukládá záznamy, které byly smazány ze souboru data.csv.
@@ -97,19 +93,15 @@ Struktura je stejná jako v souboru data.csv.
 
 soubor index.php
 Soubor index.php je hlavní rozhraní pro uživatele k vložení a zobrazení dat.
-Funkce:
-Poskytuje HTML formuláře pro zadávání dat.
-Používá AJAX (přes script.js) pro odesílání formulářových dat.
+Funkcí je tvorba HTML formulářů pro zadávání dat.
 
 soubor showInsertedData.php
 Zobrazuje všechna vložená data.
-Funkce:
-Načítá data ze souboru data.csv a zobrazuje je v HTML tabulce.
+Funkcí je načítání nově vložených dat ze souboru data.csv a jejich zobrazení v JSON.
 
 soubor script.js
-Přidává interaktivitu do index.php.
-Funkce:
-Zpracovává odesílání formuláře pomocí AJAX. Načítá a zobrazuje data z API.
+Přidává interaktivitu do souboru index.php.
+Funkcí je zpracování odesílání formuláře pomocí AJAX a načítání a zobrazování dat z API.
 
 soubor style.css
 Poskytuje styly pro HTML prvky.
@@ -121,7 +113,7 @@ soubor data.csv
 Struktura:
 Soubor data.csv obsahuje data, která jsou uspořádána do řádků. Hodnoty teplot jsou udány ve stupních Celsia.
 Obsahuje hlavní záznamy dat.
-Struktura: Obsahuje tato data: DateTime; High temperature; Low temperature; Normal high temperature; Normal low temperature
+Struktura: Data: DateTime; High temperature; Low temperature; Normal high temperature; Normal low temperature
 
 Popis řádků:
 DateTime: Datum a čas měření ve formátu ISO 8601 (YYYY-MM-DDTHH:MM)
@@ -130,7 +122,7 @@ Low temperature: Nejnižší naměřená teplota v daný den
 Normal high temperature: Nejvyšší průměrná teplota pro daný den 
 Normal low temperature: Nejnižší průměrná teplota pro daný den 
 
-Každý řádek v souboru data.csv odpovídá jednomu dni a obsahuje informace o naměřených teplotách a jejich průměrných hodnotách pro udaný den.
+Každý řádek v souboru data.csv odpovídá jednomu dni a obsahuje informace o naměřených teplotách a jejich průměrných hodnotách pro daný den.
 
 Příklad:
 DateTime; High temperature; Low temperature; Normal high temperature; Normal low temperature
@@ -145,8 +137,7 @@ Příručka pro vývojáře
 
 Klientská strana: Použijte soubor index.php pro odesílání a zobrazení dat.
 Serverová strana: Ponechte, přidejte nebo upravte funkce v api.php a CsvDatabase.php.
-Styly: Ponechte nebo upravte style.css pro změnu vzhledu aplikace.
-Testování: Důkladně testujte API endpointy pomocí nástrojů jako Postman nebo CURL.
+Styly: Ponechte nebo upravte soubor style.css pro nastavení vzhledu aplikace.
 
 Klientská Strana (index.php)
 Na klientské straně je soubor index.php hlavním rozhraním pro uživatele, kde mohou vkládat a zobrazovat data. Klíčové body v klientské části zahrnují:
@@ -158,34 +149,33 @@ Na serverové straně jsou klíčové dva soubory pro manipulaci s daty:
 
 api.php: Tento soubor obsahuje veškerou logiku pro zpracování API požadavků. Definuje endpointy pro přidávání, aktualizaci, mazání a získávání dat z databáze CSV. API poskytuje rozhraní mezi klientskou stranou a serverem pro manipulaci s daty.
 
-CsvDatabase.php: Třída CsvDatabase.php poskytuje přístup k databázi uložené ve formátu CSV. Obsahuje metody pro načítání dat z data.csv, ukládání nových záznamů, mazání záznamů a aktualizaci existujících dat v CSV souboru.
+CsvDatabase.php: Třída CsvDatabase.php poskytuje přístup k databázi uložené ve formátu CSV. Obsahuje metody pro načítání dat ze souboru data.csv, ukládání nových záznamů, mazání záznamů a aktualizaci existujících dat v CSV souboru.
 
 Struktura databáze (data.csv)
 Databáze je uložena ve formátu CSV v souboru data.csv. Struktura tohoto souboru je následující:
 
-Sloupce:
 DateTime: Datum a čas meteorologických dat ve formátu YYYY-MM-DDTHH
 (např. 2024-01-01T00:00).
 High temperature: Nejvyšší naměřená teplota v daný den (např. 20.0).
 Low temperature: Nejnižší naměřená teplota v daný den (např. -5.0).
 Normal high temperature: Normální nejvyšší teplota pro daný den (např. 18.0).
 Normal low temperature: Normální nejnižší teplota pro daný den (např. 5.0).
-Každý řádek v souboru data.csv představuje jeden záznam o meteorologických datech.
+Každý řádek v souboru data.csv představuje jeden záznam dat.
 
 Styly (styles.css)
-Soubor styles.css definuje vizuální podobu aplikace, včetně barev, velikostí písma, rozložení prvků a dalších vizuálních aspektů. Zde můžete upravovat vzhled všech prvků na stránce podle designových požadavků a uživatelských preferencí.
+Soubor styles.css definuje vizuální podobu aplikace. 
 
 Testování
 Testování přímo v prohlížeči pomocí localhost URL
 1. Zobrazení všech dat (API endpoint pro načítání dat)
-Otevřete webový prohlížeč a zadejte URL vašeho localhost a cesty k vašemu API endpointu. Například:
+Otevřete webový prohlížeč a zadejte URL vašeho localhost a cesty k vašemu API endpointu - localhost/jméno složky, ve které je umístěno API/název souboru pro načítání dat.
+Například:
 http://localhost/weather_API_2/api.php
 Stiskněte Enter pro odeslání požadavku.
-Prohlížeč zobrazí odpověď od serveru, která by měla obsahovat všechny data ve formátu JSON.
+Prohlížeč zobrazí odpověď od serveru obsahující všechna data ve formátu JSON.
 2. Zobrazení smazaných dat (API endpoint pro načítání smazaných dat)
-Pro zobrazení smazaných dat opět zadávejte do adresního řádku:
+Pro zobrazení smazaných zadávejte do adresního řádku například:
 http://localhost/weather_API_2/deleted.php
-Stejně jako v předchozím případě nahraďte jméno složky skutečným názvem adresáře, v tomto případě weather_API_2.
 Stiskněte Enter pro odeslání požadavku.
 Prohlížeč zobrazí odpověď od serveru obsahující smazaná data ve formátu JSON.
 
