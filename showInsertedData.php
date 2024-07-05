@@ -1,4 +1,6 @@
 <?php
+// Nastavení hlavičky pro JSON výstup
+header('Content-Type: application/json');
 
 $csvFile = 'data.csv';
 $fileHandle = fopen($csvFile, 'r');
