@@ -1,4 +1,6 @@
 <?php
+// Nastavení hlavičky pro JSON výstup
+header('Content-Type: application/json');
 // Kontrola, zda soubor 'deleted_data.csv' existuje
 $deletedFile = 'deleted_data.csv';
 if (file_exists($deletedFile)) {
